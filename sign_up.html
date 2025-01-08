@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patho Plus Laboratories</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="sign_up.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pills">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
@@ -25,7 +30,7 @@
                             class="text-dark">Select
                             Location</span></a>
                     <a href="login.html" target="_blank" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="signup.html" target="_blank" class="btn btn-outline-primary me-2 active">Sign Up</a>
+                    <a href="sign_up.html" target="_blank" class="btn btn-outline-primary me-2">Sign Up</a>
                 </div>
                 <!-- Hamburger Menu Button -->
                 <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse"
@@ -35,21 +40,21 @@
                 </button>
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="nav ms-auto nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home.html">Home</a>
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#cart.html" target="_blank">Cart</a>
+                            <a class="nav-link" href="#cart">Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about.html" target="_blank">About Us</a>
+                            <a class="nav-link" href="#about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact.html" target="_blank">Contact Us</a>
+                            <a class="nav-link" href="#contactUs">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#faqs.html" target="_blank">FAQs</a>
+                            <a class="nav-link" href="#faqs">FAQs</a>
                         </li>
                     </ul>
                 </div>
@@ -79,9 +84,70 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="sign_up.js"></script>
+    <body>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-container">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link tab-btn" id="login-tab" data-bs-toggle="tab"
+                                    data-bs-target="#login" type="button" role="tab" aria-controls="login"
+                                    aria-selected="true">Login</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active tab-btn" id="register-tab" data-bs-toggle="tab"
+                                    data-bs-target="#register" type="button" role="tab" aria-controls="register"
+                                    aria-selected="false">Register</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Login Form -->
+                            <div class="tab-pane show" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <form class="mt-3">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter your password">
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Forgot Password?</a>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Register Form -->
+                            <div class="tab-pane active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <form class="mt-3">
+                                    <div class="mb-3">
+                                        <label for="reg-email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="reg-email"
+                                            placeholder="Enter your email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="reg-password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="reg-password"
+                                            placeholder="Enter your password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirm-password"
+                                            placeholder="Confirm your password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </body>
 
 </html>
