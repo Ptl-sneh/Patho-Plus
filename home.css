@@ -474,3 +474,24 @@ section h2{
     align-items: center;
     margin-bottom: 20px;
 }
+
+.back-to-top-btn {
+    position: relative;
+    bottom: 80px;
+    left: 1100px;
+    background-color: #28a745;
+    color: black;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 0%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.back-to-top-btn:hover {
+    background-color: #218838;
+}

@@ -148,3 +148,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add scroll event listener
     window.addEventListener("scroll", checkVisibility);
 });
+
+// Get the button
+var backToTopBtn = document.getElementById("backToTop");
+
+// When the user scrolls down 100px from the top, show the button
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Function to scroll the page back to the top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Smooth scrolling
+    });
+}
