@@ -229,6 +229,7 @@ nav a:hover::after {
     .scroll-text {
         width: 100%;
         max-width: none;
+        margin-left: 40px;
     }
 
     .scroll-content.in-view .scroll-image,
@@ -314,4 +315,90 @@ section h2{
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Section Styles */
+.why-choose-us {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Progress Bar Styles */
+
+.progress-bars .progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar .fill {
+    width: 0;
+    height: 100%;
+    background-color: #28a745;
+    transition: width 1s ease-in-out;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-in-out;
+    margin-top: 100px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content h2{
+    margin-top:40px;
 }
