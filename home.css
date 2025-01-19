@@ -131,6 +131,7 @@ nav a:hover::after {
 }
 
 /* Container styling */
+
 .scroll-section {
     width: 100%;
     padding: 50px 20px;
@@ -147,9 +148,7 @@ nav a:hover::after {
     align-items: center;
     gap: 100px;
     opacity: 0;
-    /* Initially hidden */
     transform: translateY(50px);
-    /* Initially offset */
     transition: transform 1s ease, opacity 1s ease;
 }
 
@@ -193,6 +192,7 @@ nav a:hover::after {
 }
 
 /* Keyframes for sliding animations */
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-100%);
@@ -216,49 +216,40 @@ nav a:hover::after {
 @media (max-width: 576px) {
     .scroll-section {
         height: auto;
-        /* Allow auto height for smaller screens */
     }
 
     .scroll-content {
         display: block;
-        /* Align items vertically in column */
         opacity: 1;
-        /* Make sure it is visible */
         transform: translateY(0);
-        /* Reset the transform */
         transition: none;
-        /* Disable transition */
     }
 
     .scroll-image,
     .scroll-text {
         width: 100%;
-        /* Ensure full width */
         max-width: none;
-        /* Remove the max width limit */
     }
 
     .scroll-content.in-view .scroll-image,
     .scroll-content.in-view .scroll-text {
         animation: none;
-        /* Disable animation */
     }
 }
 
-/* Section Styling */
+/* card */
+
 .popular-tests {
     padding: 50px 20px;
     background-color: #f8f9fa;
     text-align: center;
 }
 
-/* Title Styling */
 .popular-tests h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-/* Container for the Test Cards */
 .test-cards-container {
     display: flex;
     justify-content: center;
@@ -266,7 +257,6 @@ nav a:hover::after {
     flex-wrap: wrap;
 }
 
-/* Individual Test Card Styling */
 .test-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -276,13 +266,10 @@ nav a:hover::after {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    /* Initially moved down */
     transition: opacity 0.6s ease, transform 0.6s ease;
-    /* Add delay for staggered effect */
     animation: fadeInUp 0.6s forwards;
 }
 
-/* Staggered effect using nth-child */
 .test-card:nth-child(1) {
     animation-delay: 0.2s;
 }
@@ -316,7 +303,6 @@ nav a:hover::after {
 .btn-book-now {
     display: inline-block;
     background-color: #28a745;
-    /* Green color */
     color: #ffffff;
     font-size: 1rem;
     padding: 10px 20px;
