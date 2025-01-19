@@ -29,19 +29,24 @@ function updateLocation() {
 
 // carousel
 
-
 const track = document.querySelector('.carousel-inn');
 const slides = Array.from(track.children);
 const indicators = document.querySelectorAll('.indicator');
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
+
 let currentIndex = 0;
-let interval;
 
 // Function to move the carousel
 function moveToSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
     const translateX = -index * 100;
     track.style.transform = `translateX(${translateX}%)`;
 
-    // Update active indicator
+    // Update indicators
     indicators.forEach((indicator, i) => {
         indicator.classList.toggle('active', i === index);
     });
@@ -49,71 +54,58 @@ function moveToSlide(index) {
     currentIndex = index;
 }
 
-// Function to start automatic sliding
+// Automatic sliding
 function startAutoSlide() {
-    interval = setInterval(() => {
+    return setInterval(() => {
         const nextIndex = (currentIndex + 1) % slides.length;
         moveToSlide(nextIndex);
-    }, 3000); // Slide every 3 seconds
+    }, 3000);
 }
 
-// Add event listeners for indicators
+let autoSlideInterval = startAutoSlide();
+
+// Indicators click
 indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
         moveToSlide(index);
-        clearInterval(interval); // Stop the current interval
-        startAutoSlide(); // Restart the auto-slide
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = startAutoSlide();
     });
 });
 
-// Start automatic sliding on page load
-startAutoSlide();
-
-// Buttons
-
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-
-// Function to move to the next slide
-function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    moveToSlide(nextIndex);
-}
-
-// Function to move to the previous slide
-function prevSlide() {
+// Navigation buttons
+prevButton.addEventListener('click', () => {
     const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
     moveToSlide(prevIndex);
-}
-
-// Event listeners for buttons
-nextButton.addEventListener('click', () => {
-    nextSlide();
-    clearInterval(interval); // Stop auto-slide
-    startAutoSlide(); // Restart auto-slide
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = startAutoSlide();
 });
 
-prevButton.addEventListener('click', () => {
-    prevSlide();
-    clearInterval(interval); // Stop auto-slide
-    startAutoSlide(); // Restart auto-slide
+nextButton.addEventListener('click', () => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    moveToSlide(nextIndex);
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = startAutoSlide();
 });
 
 // scroll effect
-const scrollSections = document.querySelectorAll('.scroll-content');
+const scrollContents = document.querySelectorAll('.scroll-content');
 
 function checkScroll() {
-    scrollSections.forEach((section) => {
-        const sectionPosition = section.getBoundingClientRect();
-        if (sectionPosition.top < window.innerHeight - 100) {
-            section.classList.add('in-view');
+    scrollContents.forEach((content) => {
+        const position = content.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight;
+
+        if (position < viewportHeight - 100) {
+            content.classList.add('in-view');
         } else {
-            section.classList.remove('in-view');
+            content.classList.remove('in-view');
         }
     });
 }
 
 window.addEventListener('scroll', checkScroll);
+
 
 const scrollsection = document.querySelectorAll(".container");
 
@@ -150,21 +142,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Get the button
-var backToTopBtn = document.getElementById("backToTop");
+const backToTopBtn = document.getElementById("backToTop");
 
-// When the user scrolls down 100px from the top, show the button
-window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
         backToTopBtn.style.display = "block";
     } else {
         backToTopBtn.style.display = "none";
     }
-};
+});
 
-// Function to scroll the page back to the top
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'  // Smooth scrolling
+        behavior: "smooth"
     });
 }
