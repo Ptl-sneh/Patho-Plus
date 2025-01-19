@@ -1,5 +1,7 @@
+
 body {
     font-family: Arial, sans-serif;
+    background-color: white;
 }
 
 #location-display {
@@ -7,6 +9,329 @@ body {
 } 
 
 .selected-location {
-    color: black;
+    color: white;
     /* Set the color of the selected location to black */
+}
+
+nav a{
+    font-size: 16px;
+    color: white !important;
+    text-decoration: none;
+    /* padding: 8px 0; */
+    position: relative;
+    display: inline-block;
+    width: max-content;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Carousel container */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.carousel-inn {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.car-item {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.5s,width 0.5s,height 0.5s ease-in-out;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.indicator:hover{
+    background-color: #666;
+    width: 50px;
+    height: 8px;
+}
+
+/* Navigation buttons */
+.car-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s,width 0.5s,height 0.5s ease-in-out;
+}
+
+.car-btn:hover {
+    background-color: #333;
+    width: 60px;
+    height: 60px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Container styling */
+.scroll-section {
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f5f5f5; */
+    height: 400px;
+    overflow: hidden;
+}
+
+.scroll-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(50px);
+    /* Initially offset */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.scroll-image img {
+    position: relative;
+    left: -10%;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-text {
+    position: relative;
+    right: 5%;
+    max-width: 400px;
+}
+
+.scroll-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.scroll-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Animations when in view */
+.scroll-content.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-content.in-view .scroll-image {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.scroll-content.in-view .scroll-text {
+    animation: slideInRight 1s ease forwards;
+}
+
+/* Keyframes for sliding animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll-section {
+        height: auto;
+        /* Allow auto height for smaller screens */
+    }
+
+    .scroll-content {
+        display: block;
+        /* Align items vertically in column */
+        opacity: 1;
+        /* Make sure it is visible */
+        transform: translateY(0);
+        /* Reset the transform */
+        transition: none;
+        /* Disable transition */
+    }
+
+    .scroll-image,
+    .scroll-text {
+        width: 100%;
+        /* Ensure full width */
+        max-width: none;
+        /* Remove the max width limit */
+    }
+
+    .scroll-content.in-view .scroll-image,
+    .scroll-content.in-view .scroll-text {
+        animation: none;
+        /* Disable animation */
+    }
+}
+
+/* Section Styling */
+.popular-tests {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Title Styling */
+.popular-tests h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container for the Test Cards */
+.test-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Test Card Styling */
+.test-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    /* Initially moved down */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Add delay for staggered effect */
+    animation: fadeInUp 0.6s forwards;
+}
+
+/* Staggered effect using nth-child */
+.test-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.test-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.test-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.test-card:nth-child(4) {
+    animation-delay: 0.8s;
+} 
+
+/* Fade-In animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styling */
+.btn-book-now {
+    display: inline-block;
+    background-color: #28a745;
+    /* Green color */
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.btn-book-now:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .test-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

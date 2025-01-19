@@ -26,3 +26,91 @@ function updateLocation() {
         modal.hide();
     }
 }
+
+// carousel
+
+
+const track = document.querySelector('.carousel-inn');
+const slides = Array.from(track.children);
+const indicators = document.querySelectorAll('.indicator');
+let currentIndex = 0;
+let interval;
+
+// Function to move the carousel
+function moveToSlide(index) {
+    const translateX = -index * 100;
+    track.style.transform = `translateX(${translateX}%)`;
+
+    // Update active indicator
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+    });
+
+    currentIndex = index;
+}
+
+// Function to start automatic sliding
+function startAutoSlide() {
+    interval = setInterval(() => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        moveToSlide(nextIndex);
+    }, 3000); // Slide every 3 seconds
+}
+
+// Add event listeners for indicators
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        moveToSlide(index);
+        clearInterval(interval); // Stop the current interval
+        startAutoSlide(); // Restart the auto-slide
+    });
+});
+
+// Start automatic sliding on page load
+startAutoSlide();
+
+// Buttons
+
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
+
+// Function to move to the next slide
+function nextSlide() {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    moveToSlide(nextIndex);
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    moveToSlide(prevIndex);
+}
+
+// Event listeners for buttons
+nextButton.addEventListener('click', () => {
+    nextSlide();
+    clearInterval(interval); // Stop auto-slide
+    startAutoSlide(); // Restart auto-slide
+});
+
+prevButton.addEventListener('click', () => {
+    prevSlide();
+    clearInterval(interval); // Stop auto-slide
+    startAutoSlide(); // Restart auto-slide
+});
+
+// scroll effect
+const scrollSections = document.querySelectorAll('.scroll-content');
+
+function checkScroll() {
+    scrollSections.forEach((section) => {
+        const sectionPosition = section.getBoundingClientRect();
+        if (sectionPosition.top < window.innerHeight - 100) {
+            section.classList.add('in-view');
+        } else {
+            section.classList.remove('in-view');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkScroll);
