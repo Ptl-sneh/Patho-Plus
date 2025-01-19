@@ -13,6 +13,14 @@ body {
     /* Set the color of the selected location to black */
 }
 
+.nav_fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+}
+
 nav a{
     font-size: 16px;
     color: white !important;
@@ -42,6 +50,7 @@ nav a:hover::after {
 
 .carousel {
     position: relative;
+    top: 60px;
     width: 100%;
     /* max-width: 800px; */
     height: auto;
@@ -133,6 +142,8 @@ nav a:hover::after {
 /* Container styling */
 
 .scroll-section {
+    position: relative;
+    top: 40px;
     width: 100%;
     padding: 50px 20px;
     display: flex;
@@ -241,11 +252,12 @@ nav a:hover::after {
 /* card */
 
 .popular-tests {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-direction: wrap;
-    margin-top: 40px;
+    top: 40px;
 }
 
 .sec{
@@ -320,10 +332,11 @@ section h2{
 /* Section Styles */
 .why-choose-us {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:40px ;
 }
 
 .container {
@@ -401,4 +414,63 @@ section h2{
 
 .content h2{
     margin-top:40px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Us Section */
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Quick Links Section */
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    margin-bottom: 10px;
+}
+
+.footer .social-links i {
+    margin-right: 10px;
+}
+
+.footer .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
