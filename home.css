@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: black !important;
     padding: 6px 30px;
 }
 
@@ -35,7 +35,7 @@ body {
     font-size: 16px;
     color: white;
     text-decoration: none;
-    padding: 8px 0;
+    padding: 8px 15px;
     margin: 10px;
     position: relative;
     display: inline-block;
@@ -79,6 +79,11 @@ body {
     transition: width 0.3s ease;
 }
 
+.a:hover{
+    background-color: #555;
+    border-radius: 4px;
+}
+
 .a:hover::after {
     width: 100%;
 }
@@ -89,7 +94,7 @@ body {
     width: 100% ;
     margin: 20px auto;
     overflow: hidden;
-    top: 77px;
+    top: 78px;
 }
 
 .carousel {
@@ -117,12 +122,10 @@ body {
 
 /* Captions */
 .carousel-caption {
-    position: absolute;
-    /* top: 6%;
-    left: 70%; */
+    position: relative;
     transform: translateX(-50%);
     color: black;
-    text-align: center;
+    /* text-align: center; */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -131,17 +134,19 @@ body {
     right: 40%;
 }
 
-.carousel-caption:nth-child(1){
-    top: 6%;
-    left: 90%;
-}
-.carousel-caption:nth-child(2){
-    top: 6%;
+.car-item:nth-child(1) .carousel-caption {
+    bottom: 20%;
     left: 20%;
 }
-.carousel-caption:nth-child(3){
-    top: 6%;
+
+.car-item:nth-child(2) .carousel-caption {
+    bottom: 70%;
     left: 70%;
+}
+
+.car-item:nth-child(3) .carousel-caption {
+    top: 6%;
+    left: 20%;
 }
 
 .car-item.active .carousel-caption {
