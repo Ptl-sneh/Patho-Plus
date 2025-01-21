@@ -481,7 +481,11 @@ section h2{
 }
 
 /* Progress Bar Styles */
-
+.progress-bars{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 50px;
+}
 .progress-bars .progress-item {
     margin-bottom: 20px;
 }
@@ -506,6 +510,28 @@ section h2{
     background-color: #28a745;
     transition: width 1s ease-in-out;
 }
+
+
+/* .scroll-image img {
+    position: relative;
+    left: -10%;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.scroll-content.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-content.in-view .scroll-image {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.scroll-content.in-view .scroll-text {
+    animation: slideInRight 1s ease forwards;
+} */
 
 .image-container {
     position: relative;
