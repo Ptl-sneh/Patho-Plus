@@ -25,23 +25,20 @@
                 </a>
                 <!-- Non-Collapsible Login and Sign Up Buttons -->
                 <div class="d-flex order-lg-2">
-                    <a href="#" class="text-decoration-none mt-2 me-2 a" id="location-link" onclick="openModal()"><span
-                            class="text-light mx_content">Select
-                            Location</span></a>
                     <a href="login.html" target="_blank" class="btn btn-outline-primary me-2">Login</a>
                     <a href="sign_up.html" target="_blank" class="btn btn-outline-primary me-2">Sign Up</a>
                 </div>
                 <!-- Hamburger Menu Button -->
                 <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navbar Links -->
-                <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
-                    <ul class="nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active a mx_content" href="#home" data-bs-toggle="pill">Home</a>
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse order-lg-1 flex_col" id="navbarNav">
+                <ul class="nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active a mx_content" href="#home" data-bs-toggle="pill">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link a mx_content" href="#test" data-bs-toggle="pill">Tests</a>
@@ -51,6 +48,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link a mx_content" href="#faqs" data-bs-toggle="pill">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link me-2 a" id="location-link" onclick="openModal()"><span
+                                    class="text-light mx_content">Select
+                                    Location</span></a>
                         </li>
                     </ul>
                 </div>
@@ -87,26 +89,29 @@
                     <div class="carousel-inn">
                         <!-- Slide 1 -->
                         <div class="car-item active">
-                            <img src="cars/pixlr-image-generator-993c6394-54a4-4184-bac9-71474e3ab6b41.png" alt="Slide 1">
+                            <img src="cars/AdobeStock_252662160_Preview.jpeg" alt="Slide 1">
                             <div class="carousel-caption">
                                 <h2>Trusted Results, Every Time</h2>
-                                <p>At Patho Plus Lab, we provide accurate, reliable test results for all your health needs.</p>
+                                <p>At Patho Plus Lab, we provide accurate,
+                                <br> reliable test results for all your health needs.</p>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="car-item">
-                            <img src="cars/06324a0d-61a0-4fa7-8d0d-64929530cb51.jpeg" alt="Slide 2">
+                            <img src="cars/AdobeStock_900682925_Preview.jpeg" alt="Slide 2">
                             <div class="carousel-caption">
                                 <h2>Fast Results When You Need Them</h2>
-                                <p>Get your test results promptly with our advanced technology and efficient processes.</p>
+                                <p>Get your test results promptly with 
+                                <br>our advanced technology and efficient processes.</p>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="car-item">
-                            <img src="cars/e9dade28-8c7a-438a-8830-3e067a4e47f3.jpeg" alt="Slide 3">
+                            <img src="cars/AdobeStock_975848296_Preview.jpeg" alt="Slide 3">
                             <div class="carousel-caption">
                                 <h2>Comprehensive Tests for Your Health</h2>
-                                <p>From routine blood tests to advanced diagnostics, we offer a wide range of tests.</p>
+                                <p>From routine blood tests to advanced diagnostics,
+                                <br> we offer a wide range of tests.</p>
                             </div>
                         </div>
                     </div>
@@ -165,11 +170,11 @@
             </section>
 
             <section id="why-choose-us" class="why-choose-us">
-                <div class="container">
+                <div class="container scroll-section">
                     <div class="content">
-                        <h2>Why Choose Us?</h2>
-                        <p>Here’s why our lab is trusted by thousands of customers:</p>
-                        <div class="progress-bars">
+                        <h2 class="scroll-content">Why Choose Us?</h2>
+                        <p class="scroll-content">Here’s why our lab is trusted by thousands of customers:</p>
+                        <div class="progress-bars scroll-content">
                             <div class="progress-item">
                                 <h3 style="display: inline-block;">Accuracy of Results</h3>
                                 <span style="float: right;">95%</span>
@@ -200,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image-container">
+                    <div class="image-container scroll-image">
                         <img src="cars/Screenshot 2024-07-07 092045.png" alt="Lab Equipment">
                     </div>
                 </div>
@@ -211,7 +216,7 @@
                 <div class="container">
                     <div class="row">
                         <!-- Contact Us Section -->
-                        <div class="col-md-4 bg-primary" style="margin-left: 100px;">
+                        <div class="col-md-4">
                             <h5>Contact Us</h5>
                             <p>
                                 <strong>Patho Plus Lab</strong><br>
@@ -222,7 +227,7 @@
                         </div>
             
                         <!-- Quick Links Section -->
-                        <div class="col-md-4 bg-dark">
+                        <div class="col-md-4">
                             <h5>Quick Links</h5>
                             <ul>
                                 <li><a href="#">About Us</a></li>
@@ -233,7 +238,7 @@
                         </div>
             
                         <!-- Social Media Section -->
-                        <div class="col-md-4 bg-danger">
+                        <div class="col-md-4">
                             <h5>Follow Us</h5>
                             <ul class="social-links">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
