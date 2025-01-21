@@ -6,7 +6,40 @@ body {
 
 #location-display {
     font-size: 18px;
-} 
+}
+
+.btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.btn:hover{
+    color: #333;
+    background-color:dodgerblue;
+    padding: 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 6px 30px;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+}
 
 .selected-location {
     color: white;
@@ -21,7 +54,11 @@ body {
     left: 0px;
 }
 
-nav a{
+.mx_content {
+    width: max-content !important;
+}
+
+.a{
     font-size: 16px;
     color: white !important;
     text-decoration: none;
@@ -31,7 +68,7 @@ nav a{
     width: max-content;
 }
 
-nav a::after{
+.a::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -42,7 +79,7 @@ nav a::after{
     transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+.a:hover::after {
     width: 100%;
 }
 
@@ -52,7 +89,7 @@ nav a:hover::after {
     width: 100% ;
     margin: 20px auto;
     overflow: hidden;
-    top: 56px;
+    top: 77px;
 }
 
 .carousel {
@@ -72,6 +109,7 @@ nav a:hover::after {
 }
 
 .car-item img {
+    max-height:500px ;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -80,14 +118,30 @@ nav a:hover::after {
 /* Captions */
 .carousel-caption {
     position: absolute;
-    bottom: 20%;
-    left: 50%;
+    /* top: 6%;
+    left: 70%; */
     transform: translateX(-50%);
     color: black;
     text-align: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    right: 40%;
+}
+
+.carousel-caption:nth-child(1){
+    top: 6%;
+    left: 90%;
+}
+.carousel-caption:nth-child(2){
+    top: 6%;
+    left: 20%;
+}
+.carousel-caption:nth-child(3){
+    top: 6%;
+    left: 70%;
 }
 
 .car-item.active .carousel-caption {
