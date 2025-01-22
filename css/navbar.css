@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+#location-display {
+    font-size: 18px;
+}
+
+.btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.btn:hover {
+    color: #333;
+    background-color: dodgerblue;
+    padding: 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black !important;
+    padding: 6px 30px;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    /* margin: 10px; */
+    position: relative;
+    display: inline-block;
+}
+
+.selected-location {
+    color: white;
+    /* Set the color of the selected location to black */
+}
+
+.nav_fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+}
+
+.mx_content {
+    width: max-content !important;
+}
+
+.a {
+    font-size: 16px;
+    color: white !important;
+    text-decoration: none;
+    /* padding: 8px 0; */
+    position: relative;
+    display: inline-block;
+    width: max-content;
+}
+
+.a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.a:hover::after {
+    width: 100%;
+}
