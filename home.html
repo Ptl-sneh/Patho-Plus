@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/scrollEffect.css">
-    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/backtotop.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/WCU.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/faqs.css">
+    <link rel="stylesheet" href="css/aboutus.css">
     <!-- <link rel="stylesheet" href="home.css"> -->
 </head>
 
@@ -52,10 +53,10 @@
                             <a class="nav-link a mx_content" href="#test" data-bs-toggle="pill">Tests</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link a mx_content" href="#about" data-bs-toggle="pill">About Us</a>
+                            <a class="nav-link a mx_content" href="#about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link a mx_content" href="#faqs" data-bs-toggle="pill">FAQs</a>
+                            <a class="nav-link a mx_content" href="#faqs">FAQs</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link me-2 a" id="location-link" onclick="openModal()"><span
@@ -260,6 +261,77 @@
                     </div>
                 </div>
             </section>
+            
+            <section id="faqs">
+                <div class="faq-container">
+                    <div class="faq-header">
+                        <h1>Frequently Asked Questions</h1>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What services do you provide?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We provide a variety of diagnostic tests, including blood tests, imaging, and health check-up packages
+                            tailored to your needs.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How can I book a test?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            You can book a test online through our website or by calling our customer care number. Walk-ins are also
+                            welcome.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are your operating hours?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Our laboratory is open from 7:00 AM to 8:00 PM from Monday to Saturday and 8:00 AM to 2:00 PM on Sundays.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you provide home sample collection?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, we offer home sample collection services. Please contact us to schedule a convenient time.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                <section id="about" class="about-container">
+                    <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>
+                        Patho Plus Laboratory is a state-of-the-art diagnosticcenter dedicated to providing accurate and reliable
+                        results.
+                        Our expert team ensures every test is conducted withprecision and care, making us a trusted partner in
+                        healthcare.                        
+                    </p>
+                    <p>
+                        With advanced technology, a wide range of services, and acommitment to excellence, we strive to deliver
+                        quality healthcare solutions to our community.
+                    </p>
+                    <button id="learn-more-btn">Learn More</button>
+                </div>
+                <div class="about-image">
+                    <img src="patho-lab.jpg" alt="Laboratory">
+                </div>
+            </section>
 
             <!-- Footer Section -->
             <footer class="footer">
@@ -308,12 +380,6 @@
         </div>
         <div class="tab-pane" id="test" >
             <p>this is cart</p>
-        </div>
-        <div class="tab-pane" id="about" >
-            <p>this is about</p>
-        </div>
-        <div class="tab-pane" id="faqs" >
-            <p>this is contact us</p>
         </div>
     </div>
     <script src="home.js"></script>
