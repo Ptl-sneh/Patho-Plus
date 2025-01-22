@@ -142,32 +142,72 @@
                 <h2>Most Popular Tests</h2>
                 <div class="popular-tests">
                     <div class="test-card">
-                        <img src="https://via.placeholder.com/300" alt="Blood Test">
+                        <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test">
                         <h3>Blood Test</h3>
                         <p>A comprehensive test to detect health conditions.</p>
-                        <a href="#" class="btn-book-now">Book Now</a>
+                        <button class="btn-book-now openModal">Book Now</button>
                     </div>
                     <div class="test-card">
-                        <img src="https://via.placeholder.com/300" alt="Blood Test">
+                        <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test">
                         <h3>X-Ray</h3>
                         <p>Quick and efficient X-ray imaging to diagnose conditions like fractures, infections, and tumors.</p>
 
-                        <a href="#" class="btn-book-now">Book Now</a>
+                        <button class="btn-book-now openModal">Book Now</button>
                     </div>
                     <div class="test-card">
-                        <img src="https://via.placeholder.com/300" alt="Blood Test">
+                        <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test">
                         <h3>Urine Test</h3>
                         <p>Our urine tests check for urinary tract infections, kidney disease, and other conditions.</p>
-                        <a href="#" class="btn-book-now">Book Now</a>
+                        <button class="btn-book-now openModal">Book Now</button>
                     </div>
                     <div class="test-card">
-                        <img src="https://via.placeholder.com/300" alt="Blood Test">
+                        <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test">
                         <h3>ECG</h3>
                         <p>Electrocardiogram (ECG) tests for detecting heart issues like arrhythmia, heart attacks, etc.</p>
-                        <a href="#" class="btn-book-now">Book Now</a>
+                        <button class="btn-book-now openModal">Book Now</button>
                     </div>
                 </div>
             </section>
+
+            <!-- Trigger Button
+            <button id="openFormModal" class="open-modal-btn">Open Form</button> -->
+            
+            <!-- Form Modal -->
+            <div id="formModal" class="modal1">
+                <div class="modal_content">
+                    <span class="close-btn" id="closeFormModal">&times;</span>
+                    <h3>Book Your Test</h3>
+                    <form id="testForm">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" required>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" required>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Confirmation Modal -->
+            <div id="confirmationModal" class="modal1">
+                <div class="modal_content">
+                    <span class="close-btn" id="closeConfirmationModal">&times;</span>
+                    <h3>Success</h3>
+                    <p>Your test has been successfully booked!</p>
+                    <button id="okButton" class="ok-btn">OK</button>
+                </div>
+            </div>
+
 
             <section id="why-choose-us" class="why-choose-us">
                 <div class="container scroll-section">
