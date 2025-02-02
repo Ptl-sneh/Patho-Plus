@@ -112,8 +112,8 @@
 
 .image-container {
     position: relative;
-    bottom: 20%;
-    left: 5%;
+    bottom: 100px;
+    right: 40px;
     flex: 1;
     max-width: 500px;
     opacity: 0;

@@ -7,6 +7,12 @@
     top: 40px;
 }
 
+.display_pro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .sec {
     position: relative;
     top: 50px;
