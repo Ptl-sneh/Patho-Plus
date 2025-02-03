@@ -1,10 +1,10 @@
 .popular-tests {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-direction: wrap;
-    top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: wrap;
+  top: 0px;
 }
 
 .display_pro {
@@ -12,211 +12,232 @@
   flex-wrap: wrap;
 }
 
-
 .sec {
-    position: relative;
-    top: 50px;
+  position: relative;
+  top: 50px;
 }
 
 section h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .test-card {
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.med_con{
+    width: 250px;
+    height: 250px;
+    background-color: lightgray;
 }
 
 .test-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
 .test-card img {
-    width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 
 .test-card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .test-card h3 {
-    margin: 15px 0 10px;
-    font-size: 1.5rem;
-    color: #333;
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .test-card p {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
 }
 
 .btn-book-now {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-book-now:hover {
-    background-color: #218838;
-    transform: translateY(8px);
+  background-color: #218838;
+  transform: translateY(8px);
 }
 
 @media screen and (max-width: 768px) {
-    .popular-tests {
-        flex-direction: column;
-        align-items: center;
-    }
+  .popular-tests {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Modal Styles */
 .modal1 {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeOut 0.3s forwards;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeOut 0.3s forwards;
 }
 
 .modal_content {
-    position: relative;
-    background-color: #403f3f;
-    margin: 15% auto;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 100%;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transform: scale(0.8);
-    animation: scaleOut 0.5s forwards;
-    transform: scale(0.8);
-    animation: scaleOut 0.3s forwards;
+  position: relative;
+  background-color: #403f3f;
+  margin: 15% auto;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 100%;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(0.8);
+  animation: scaleOut 0.5s forwards;
+  transform: scale(0.8);
+  animation: scaleOut 0.3s forwards;
 }
 
 .modal1.show {
-    display: block;
-    /* Ensure modal is visible */
-    animation: fadeIn 0.3s forwards;
+  display: block;
+  /* Ensure modal is visible */
+  animation: fadeIn 0.3s forwards;
 }
 
 .modal_content.show {
-    animation: scaleIn 0.3s forwards;
+  animation: scaleIn 0.3s forwards;
 }
 
 .modal1.hide {
-    animation: fadeOut 0.3s forwards;
+  animation: fadeOut 0.3s forwards;
 }
 
 .modal_content.hide {
-    animation: scaleOut 0.3s forwards;
+  animation: scaleOut 0.3s forwards;
 }
 
 /* Keyframes for fade in and fade out */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
+  from {
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Keyframes for scale in and scale out */
 @keyframes scaleIn {
-    from {
-        transform: scale(0.8);
-    }
+  from {
+    transform: scale(0.8);
+  }
 
-    to {
-        transform: scale(1);
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes scaleOut {
-    from {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1);
+  }
 
-    to {
-        transform: scale(0.8);
-    }
+  to {
+    transform: scale(0.8);
+  }
 }
 
-
 .close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close-btn:hover {
-    color: red;
+  color: red;
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
 }
 
 input,
 select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .submit-btn,
 .ok-btn,
 .open-modal-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .submit-btn:hover,
 .ok-btn:hover,
 .open-modal-btn:hover {
-    background-color: #45a049;
+  background-color: #45a049;
+}
+
+.animation1 {
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
