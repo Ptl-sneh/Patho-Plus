@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="css/card.css" />
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/backtotop.css">
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/backtotop.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -76,10 +76,7 @@
           >
             <ul class="nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link active a mx_content"
-                  href="#home"
-                  data-bs-toggle="pill"
+                <a class="nav-link active a mx_content" href="home.html"
                   >Home</a
                 >
               </li>
@@ -184,12 +181,12 @@
         </div>
       </div>
     </div>
-    <h1 style="margin-top: 100px; margin-left: 60px;">
+    <h1 style="margin-top: 100px; margin-left: 60px">
       Health Checkup Packages
     </h1>
 
     <section class="sec">
-      <div class="popular-tests display_pro">
+      <div class="popular-tests">
         <div class="test-card animation1" style="width: 550px">
           <h3>Heart Health Package</h3>
           <p>
@@ -253,61 +250,71 @@
       </div>
     </div>
 
-    <h1 style="margin-top: 100px; margin-left: 60px;">
+    <!-- Test by medical conditions -->
+
+    <h1 style="margin-top: 100px; margin-left: 60px">
       Test By Medical Conditions
     </h1>
 
-    <section class="sec">
-      <div class="popular-tests display_pro">
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Diabetes</h3>
+    <div class=" display_pro" style="width: 100%;">
+      <div class="test-card animation1 med_con" onclick="flipCard()">
+        <div class="card12" id="card">
+          <div class="side front" id="front-content">
+            <img src="" alt="" height="50px" width="50px" />
+            <h3>Diabetes</h3>
+          </div>
+          <div class="side back" id="back-content">
+            <p>
+              Diabetes is a chronic disease that occurs when the body can't
+              produce enough insulin or can't use insulin effectively.
+            </p>
+          </div>
         </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Heart Disease</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Fear</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Heart Disease</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Allergy</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Fear</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Infection</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Allergy</h3>
       </div>
-    </section>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Infection</h3>
+      </div>
+    </div>
 
-    <h1 style="margin-top: 100px; margin-left: 60px;">
-      Test By Body Parts
-    </h1>
+    <!-- Test by body parts -->
 
-    <section class="sec">
-      <div class="popular-tests display_pro">
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Heart</h3>
-        </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Liver</h3>
+    <h1 style="margin-top: 100px; margin-left: 60px">Test By Body Parts</h1>
+
+    <div class="popular-tests display_pro">
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Heart</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Kidney</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Liver</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Intestines</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Kidney</h3>
       </div>
-        <div class="test-card animation1 med_con">
-          <img src="" alt="" height="50px" width="50px" />
-          <h3>Stomach</h3>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Intestines</h3>
       </div>
-    </section>
+      <div class="test-card animation1 med_con">
+        <img src="" alt="" height="50px" width="50px" />
+        <h3>Stomach</h3>
+      </div>
+    </div>
 
     <!-- Confirmation Modal -->
     <div id="confirmationModal" class="modal1">
@@ -320,66 +327,64 @@
     </div>
 
     <!-- Footer -->
-     <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <!-- Contact Us Section -->
-              <div class="col-md-4">
-                <h5>Contact Us</h5>
-                <p>
-                  <strong>Patho Plus Lab</strong>
-                  <br />
-                  <br />
-                  Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
-                  Swaminarayan School, Cadila Road, Ghodasar, A'bad.
-                  <br />
-                  <br />
-                  Contact: +91 73830 61632
-                  <br />
-                  <br />
-                  Email:
-                  <a href="mailto:info@pathopluslab.com"
-                    >info@pathopluslab.com</a
-                  >
-                </p>
-              </div>
-
-              <!-- Quick Links Section -->
-              <div class="col-md-4">
-                <h5>Quick Links</h5>
-                <ul class="social-links">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Tests</a></li>
-                  <li><a href="#">FAQs</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-
-              <!-- Social Media Section -->
-              <div class="col-md-4">
-                <h5>Follow Us</h5>
-                <ul class="social-links">
-                  <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Us Section -->
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>
+              <strong>Patho Plus Lab</strong>
+              <br />
+              <br />
+              Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
+              Swaminarayan School, Cadila Road, Ghodasar, A'bad.
+              <br />
+              <br />
+              Contact: +91 73830 61632
+              <br />
+              <br />
+              Email:
+              <a href="mailto:info@pathopluslab.com">info@pathopluslab.com</a>
+            </p>
           </div>
-        </footer>
 
-        <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
-          ↑
-        </button>
+          <!-- Quick Links Section -->
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="social-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Tests</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
+      ↑
+    </button>
 
     <script src="js/carousel.js"></script>
     <script src="js/card.js"></script>
