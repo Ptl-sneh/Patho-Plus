@@ -1,20 +1,32 @@
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const icon = question.querySelector('span:last-child');
+var faqItems = document.getElementsByClassName("faq-item");
 
-        if (answer.style.maxHeight) {
-            // If the answer is already expanded, collapse it
-            answer.style.maxHeight = null;
-            icon.textContent = '+';
-        } else {
-            // Collapse any other expanded answers
-            document.querySelectorAll('.faq-answer').forEach(item => (item.style.maxHeight = null));
-            document.querySelectorAll('.faq-question span:last-child').forEach(icon => (icon.textContent = '+'));
+for (var i = 0; i < faqItems.length; i++) {
+  var question = faqItems[i].getElementsByClassName("faq-question")[0];
 
-            // Expand the selected answer
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            icon.textContent = '-';
-        }
-    });
-});
+  question.onclick = function () {
+    var answer = this.parentNode.getElementsByClassName("faq-answer")[0];
+    var icon = this.getElementsByTagName("span")[1];
+
+    // Close all other answers
+    for (var j = 0; j < faqItems.length; j++) {
+      var otherAnswer = faqItems[j].getElementsByClassName("faq-answer")[0];
+      var otherIcon = faqItems[j]
+        .getElementsByClassName("faq-question")[0]
+        .getElementsByTagName("span")[1];
+
+      if (otherAnswer !== answer) {
+        otherAnswer.style.maxHeight = "0px";
+        otherIcon.innerHTML = "+";
+      }
+    }
+
+    // Toggle answer with smooth transition
+    if (answer.style.maxHeight === "0px" || answer.style.maxHeight === "") {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.innerHTML = "-";
+    } else {
+      answer.style.maxHeight = "0px";
+      icon.innerHTML = "+";
+    }
+  };
+}
