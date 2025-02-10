@@ -44,22 +44,36 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item p-2">
-              <a class="nav-link a mx_content" href="#">Home</a>
+              <a class="nav-link a" href="#">Home</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link a mx_content" href="test.html" target="_blank">Tests</a>
+              <a class="nav-link a" href="test.html" target="_blank">Tests</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link a mx_content" href="#about">About Us</a>
+              <a class="nav-link a" href="#about">About Us</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link a mx_content" href="#faqs">FAQs</a>
+              <a class="nav-link a " href="#faqs">FAQs</a>
             </li>
             <li class="nav-item p-2">
               <img src="cars/search.png" height="20px" width="20px" alt="">
               <a href="#" class="nav-link a mx_content" id="location-link" onclick="openModal()">
                 <span class="text-light">Select Location</span>
               </a>
+            </li>
+            <li class="nav-item p-2 dropdown">
+              <a href="#" class="nav-link a mx_content">Branch Locator ▼</a>
+              <ul class="dropdown_menu">
+                <li><a
+                    href="https://www.google.com/maps/place/PathoPlus+laboratories/@22.9826213,72.6150075,17z/data=!4m14!1m7!3m6!1s0x395e8547dc14afc1:0x2f15e5ec102671fc!2sPathoPlus+laboratories!8m2!3d22.9826213!4d72.6150075!16s%2Fg%2F11j0_d81tz!3m5!1s0x395e8547dc14afc1:0x2f15e5ec102671fc!8m2!3d22.9826213!4d72.6150075!16s%2Fg%2F11j0_d81tz?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="nav-link">Ghodasar</a></li>
+                <li><a
+                    href="https://www.google.com/maps/place/PATHOPLUS+LABORATORIES/@22.9742421,72.6028597,17z/data=!4m14!1m7!3m6!1s0x395e85cd16a295fd:0xb983e23c642c1101!2sPATHOPLUS+LABORATORIES!8m2!3d22.9742421!4d72.6028597!16s%2Fg%2F11h35nkjh7!3m5!1s0x395e85cd16a295fd:0xb983e23c642c1101!8m2!3d22.9742421!4d72.6028597!16s%2Fg%2F11h35nkjh7?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="nav-link">Isanpur</a></li>
+                <li><a
+                    href="https://www.google.com/maps/place/Pathoplus+laboratories/@23.0365535,72.6690677,17z/data=!4m14!1m7!3m6!1s0x395e87163a78afa7:0xa3d2664015b2b720!2sPathoplus+laboratories!8m2!3d23.0365535!4d72.6690677!16s%2Fg%2F11t4_cl111!3m5!1s0x395e87163a78afa7:0xa3d2664015b2b720!8m2!3d23.0365535!4d72.6690677!16s%2Fg%2F11t4_cl111?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="nav-link">Nikol</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -83,10 +97,9 @@
           <div class="modal-body">
             <select id="locationSelect" class="form-select" onchange="updateLocation()">
               <option value="" disabled selected>Select a location</option>
-              <option value="Ahmedabad">Ahmedabad</option>
-              <option value="Anand">Anand</option>
-              <option value="Baroda">Baroda</option>
-              <option value="Surat">Surat</option>
+              <option value="Ghodasar">Ghodasar</option>
+              <option value="Isanpur">Isanpur</option>
+              <option value="Nikol">Nikol</option>
             </select>
           </div>
           <div class="modal-footer">
@@ -147,7 +160,7 @@
 
       <section class="sec">
         <h2>Most Popular Tests</h2>
-        <div class="popular-tests">
+        <div class="popular-tests" style="gap: 20px;">
           <div class="test-card">
             <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test" />
             <h3>Blood Test</h3>
@@ -350,17 +363,14 @@
           <div class="row">
             <!-- Contact Us Section -->
             <div class="col-md-4">
-              <h5>Contact Us</h5>
+              <h5 style="padding-right:277px;">Contact Us</h5>
               <p>
                 <strong>Patho Plus Lab</strong>
-                <br />
                 <br />
                 Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
                 Swaminarayan School, Cadila Road, Ghodasar, A'bad.
                 <br />
-                <br />
                 Contact: +91 73830 61632
-                <br />
                 <br />
                 Email:
                 <a href="mailto:info@pathopluslab.com">info@pathopluslab.com</a>
@@ -368,36 +378,35 @@
             </div>
 
             <!-- Quick Links Section -->
-            <div class="col-md-4">
+            <div class="col-md-4" style="padding-bottom: 53px;">
               <h5>Quick Links</h5>
-              <ul class="social-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="test.html" target="_blank">Tests</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-              </ul>
+              <p style="padding-right: 30px;">
+                <a href="#">Home</a>
+                <br>
+                <a href="#about">About Us</a>
+                <br>
+                <a href="test.html" target="_blank">Tests</a>
+                <br>
+                <a href="#faqs">FAQs</a>
+              </p>
             </div>
 
             <!-- Social Media Section -->
-            <div class="col-md-4">
+            <div class="col-md-4" style="padding-bottom: 25px;">
               <h5>Follow Us</h5>
-              <ul class="social-links">
-                <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-github"></i> Github</a>
-                </li>
-              </ul>
+              <p>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <br>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <br>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <br>
+                <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <br>
+                <a href="#"><i class="fab fa-github"></i> Github</a>
+                <br>
+
+              </p>
             </div>
           </div>
         </div>
