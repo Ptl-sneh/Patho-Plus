@@ -6,65 +6,61 @@ body {
     color: #333;
 }
 
-#location-display {
-    font-size: 18px;
-}
-
-.btn {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.btn:hover {
-    color: #333;
-    background-color: dodgerblue;
-    padding: 8px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black !important;
-    padding: 6px 30px;
-}
-
-.navbar a {
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    /* margin: 10px; */
-    position: relative;
-    display: inline-block;
-}
-
-.selected-location {
-    color: white;
-    /* Set the color of the selected location to black */
-}
-
 .nav_fixed {
     position: fixed;
     width: 100%;
-    z-index: 100;
-    top: 0px;
-    left: 0px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
 }
 
-.mx_content {
-    width: max-content !important;
+.navbar {
+    background-color: black !important;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+/* Ensure navbar menu aligns center on large screens but left on mobile */
+.navbar-nav {
+    margin: auto;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: left;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+    }
+}
+
+/* Fixing Navbar Toggler Position */
+.navbar-toggler {
+    margin-left: auto;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    background: none;
+}
+
+.btn:hover {
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    color: white;
 }
 
 .a {
     font-size: 16px;
     color: white !important;
     text-decoration: none;
-    /* padding: 8px 0; */
     position: relative;
     display: inline-block;
     width: max-content;
@@ -88,4 +84,9 @@ body {
 
 .a:hover::after {
     width: 100%;
+}
+
+/* Location Link Color Change */
+.selected-location {
+    color: yellow;
 }

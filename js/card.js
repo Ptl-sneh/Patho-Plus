@@ -5,6 +5,7 @@ const modalContent = modal1.querySelector(".modal_content");
 const modalContent2 = modal2.querySelector(".modal_content");
 
 const openModalBtn = document.querySelectorAll(".openModal");
+
 const closeFormModalBtn = document.getElementById("closeFormModal");
 const closeConfirmationModalBtn = document.getElementById("closeConfirmationModal");
 const okButton = document.getElementById("okButton");
@@ -22,7 +23,7 @@ openModalBtn.forEach((button) => {
 
 closeFormModalBtn.addEventListener("click", () => {
   // modal1.style.display = "none";
-    document.body.style.overflow = "visible";
+  document.body.style.overflow = "visible";
   modal1.classList.remove("show");
   modalContent.classList.remove("show");
   modal1.classList.add("hide");
@@ -100,13 +101,7 @@ window.addEventListener("click", (event) => {
 
 // flip
 
-let flipped = false;
 
-function flipCard() {
-  const card = document.getElementById("card");
-  const frontContent = document.getElementById("front-content");
-  const backContent = document.getElementById("back-content");
-
-  card.classList.toggle("flipped");
-
+function flipCard(card) {
+  card.classList.toggle("flip");
 }

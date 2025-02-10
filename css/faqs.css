@@ -8,8 +8,6 @@
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
 
@@ -33,7 +31,7 @@
     cursor: pointer;
     padding: 15px;
     font-size: 1.2rem;
-    background-color: #f0faff;
+    /* background-color: #f0faff; */
     color: #0073e6;
     transition: background-color 0.5s ease;
     display: flex;
@@ -48,7 +46,7 @@
 
 .faq-question span {
     /* display: inline-block; */
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     transition: transform 0.5s ease-in-out;
 }
 

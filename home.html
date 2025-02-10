@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patho Plus Laboratories</title>
-    <!-- FontAwesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patho Plus Laboratories</title>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/scrollEffect.css" />
@@ -30,471 +22,397 @@
     <link rel="stylesheet" href="css/faqs.css" />
     <link rel="stylesheet" href="css/aboutus.css" />
     <link rel="stylesheet" href="css/sample.css" />
-  </head>
+</head>
 
-  <body>
-    <div class="container-fluid">
-      <!-- Navbar -->
-      <nav class="navbar nav_fixed navbar-expand-lg navbar-dark bg-dark">
+<body>
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar nav_fixed navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <!-- Logo -->
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Logo"
-              width="50"
-              height="50"
-              class="me-2"
-            />
-          </a>
-          <!-- Non-Collapsible Login and Sign Up Buttons -->
-          <div class="d-flex order-lg-2">
-            <a
-              href="login.html"
-              target="_blank"
-              class="btn btn-outline-primary me-2"
-              >Login</a
-            >
-            <a
-              href="sign_up.html"
-              target="_blank"
-              class="btn btn-outline-primary me-2"
-              >Sign Up</a
-            >
-          </div>
-          <!-- Hamburger Menu Button -->
-          <button
-            class="navbar-toggler order-lg-3"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navbar Links -->
-          <div
-            class="collapse navbar-collapse order-lg-1 flex_col"
-            id="navbarNav"
-          >
-            <ul class="nav ms-auto">
-              <li class="nav-item">
-                <a
-                  class="nav-link active a mx_content"
-                  href="#home"
-                  data-bs-toggle="pill"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link a mx_content"
-                  href="test.html"
-                  target="_blank"
-                  >Tests</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link a mx_content" href="#about">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link a mx_content" href="#faqs">FAQs</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class="nav-link me-2 a"
-                  id="location-link"
-                  onclick="openModal()"
-                  ><span class="text-light mx_content">Select Location</span></a
-                >
-              </li>
-            </ul>
-          </div>
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://via.placeholder.com/50" alt="Logo" width="50" height="50" class="me-2" />
+            </a>
+
+            <!-- Move toggler to the right -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item p-2">
+                        <a class="nav-link a mx_content" href="#">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link a mx_content" href="test.html" target="_blank">Tests</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link a mx_content" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link a mx_content" href="#faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a href="#" class="nav-link a mx_content" id="location-link" onclick="openModal()">
+                            <span class="text-light">Select Location</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Non-Collapsible Login and Sign Up Buttons -->
+            <div class="d-flex">
+                <a href="login.html" target="_blank" class="btn me-2">Login</a>
+                <a href="sign_up.html" target="_blank" class="btn">Sign Up</a>
+            </div>
         </div>
-      </nav>
-      <div
-        class="modal fade"
-        id="locationModal"
-        tabindex="-1"
-        aria-labelledby="locationModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="locationModalLabel">
-                Select Location
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <select id="locationSelect" class="form-select" onchange="updateLocation()">
-                <option value="" disabled selected>Select a location</option>
-                <option value="Ahmedabad">Ahmedabad</option>
-                <option value="Anand">Anand</option>
-                <option value="Baroda">Baroda</option>
-                <option value="Surat">Surat</option>
-              </select>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
+    </nav>
+    <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="locationModalLabel">
+              Select Location
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <select id="locationSelect" class="form-select" onchange="updateLocation()">
+              <option value="" disabled selected>Select a location</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Anand">Anand</option>
+              <option value="Baroda">Baroda</option>
+              <option value="Surat">Surat</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="tab-content">
-      <div class="tab-pane active" id="home">
-        <div class="carousel-container">
-          <div class="carousel">
-            <div class="carousel-inn">
-              <!-- Slide 1 -->
-              <div class="car-item active">
-                <img src="cars/Untitled Project.jpg" alt="Slide 1"/>
-              </div>
-              <!-- Slide 2 -->
-              <div class="car-item">
-                <img
-                  src="cars/Web_Photo_Editor.jpg"
-                  alt="Slide 2"
-                />
-              </div>
-              <!-- Slide 3 -->
-              <div class="car-item">5
-                <img
-                  src="cars/Untitled Project1.jpg"
-                  alt="Slide 3"
-                />
-              </div>
+  <div class="tab-content">
+    <div class="tab-pane active" id="home">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-inn">
+            <!-- Slide 1 -->
+            <div class="car-item active">
+              <img src="cars/Untitled Project.jpg" alt="Slide 1" />
             </div>
-            <!-- Navigation Buttons -->
-            <button class="car-btn prev-btn">❮</button>
-            <button class="car-btn next-btn">❯</button>
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-              <span class="indicator active" data-index="0"></span>
-              <span class="indicator" data-index="1"></span>
-              <span class="indicator" data-index="2"></span>
+            <!-- Slide 2 -->
+            <div class="car-item">
+              <img src="cars/Web_Photo_Editor.jpg" alt="Slide 2" />
             </div>
+            <!-- Slide 3 -->
+            <div class="car-item">
+              <img src="cars/Untitled Project1.jpg" alt="Slide 3" />
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <button class="car-btn prev-btn">❮</button>
+          <button class="car-btn next-btn">❯</button>
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
           </div>
         </div>
-        <section class="scroll-section">
-          <div class="scroll-content">
-            <div class="scroll-image">
-              <img
-                src="cars/Screenshot 2024-07-07 091950.png"
-                alt="Placeholder Image"
-              />
-            </div>
-            <div class="scroll-text">
-              <h2>Dynamic Scrolling Effect</h2>
-              <p>
-                This is an example of text that appears from the right while the
-                image slides in from the left as you scroll down.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="sec">
-          <h2>Most Popular Tests</h2>
-          <div class="popular-tests">
-            <div class="test-card">
-              <img
-                src="cars/Screenshot 2024-07-07 091950.png"
-                height="50px"
-                width="20px"
-                alt="Blood Test"
-              />
-              <h3>Blood Test</h3>
-              <p>A comprehensive test to detect health conditions.</p>
-              <button class="btn-book-now openModal">Book Now</button>
-            </div>
-            <div class="test-card">
-              <img
-                src="cars/Screenshot 2024-07-07 091950.png"
-                height="50px"
-                width="20px"
-                alt="Blood Test"
-              />
-              <h3>X-Ray</h3>
-              <p>
-                Quick and efficient X-ray imaging to diagnose conditions like
-                fractures, infections, and tumors.
-              </p>
+      </div>
 
-              <button class="btn-book-now openModal">Book Now</button>
-            </div>
-            <div class="test-card">
-              <img
-                src="cars/Screenshot 2024-07-07 091950.png"
-                height="50px"
-                width="20px"
-                alt="Blood Test"
-              />
-              <h3>Urine Test</h3>
-              <p>
-                Our urine tests check for urinary tract infections, kidney
-                disease, and other conditions.
-              </p>
-              <button class="btn-book-now openModal">Book Now</button>
-            </div>
-            <div class="test-card">
-              <img
-                src="cars/Screenshot 2024-07-07 091950.png"
-                height="50px"
-                width="20px"
-                alt="Blood Test"
-              />
-              <h3>ECG</h3>
-              <p>
-                Electrocardiogram (ECG) tests for detecting heart issues like
-                arrhythmia, heart attacks, etc.
-              </p>
-              <button class="btn-book-now openModal">Book Now</button>
-            </div>
-          </div>
-        </section>
 
-        <!-- Trigger Button
+      <section class="scroll-section">
+        <div class="scroll-content">
+          <div class="scroll-image">
+            <img src="cars/Screenshot 2024-07-07 091950.png" alt="Placeholder Image" />
+          </div>
+          <div class="scroll-text">
+            <h2>Dynamic Scrolling Effect</h2>
+            <p>
+              This is an example of text that appears from the right while the
+              image slides in from the left as you scroll down.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- popular test -->
+
+      <section class="sec">
+        <h2>Most Popular Tests</h2>
+        <div class="popular-tests">
+          <div class="test-card">
+            <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test" />
+            <h3>Blood Test</h3>
+            <p>A comprehensive test to detect health conditions.</p>
+            <button class="btn-book-now openModal">Book Now</button>
+          </div>
+          <div class="test-card">
+            <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test" />
+            <h3>X-Ray</h3>
+            <p>
+              Quick and efficient X-ray imaging to diagnose conditions like
+              fractures.
+            </p>
+
+            <button class="btn-book-now openModal">Book Now</button>
+          </div>
+          <div class="test-card">
+            <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test" />
+            <h3>Urine Test</h3>
+            <p>
+              Our urine tests check for urinary tract infections, kidney
+              disease.
+            </p>
+            <button class="btn-book-now openModal">Book Now</button>
+          </div>
+          <div class="test-card">
+            <img src="cars/Screenshot 2024-07-07 091950.png" height="50px" width="20px" alt="Blood Test" />
+            <h3>ECG</h3>
+            <p>
+              Electrocardiogram (ECG) tests for detecting heart issues like
+              .
+            </p>
+            <button class="btn-book-now openModal">Book Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trigger Button
             <button id="openFormModal" class="open-modal-btn">Open Form</button> -->
 
-        <!-- Form Modal -->
-        <div id="formModal" class="modal1">
-          <div class="modal_content">
-            <span class="close-btn" id="closeFormModal">&times;</span>
-            <h3>Book Your Test</h3>
-            <form id="testForm">
-              <label for="username">Username:</label>
-              <input type="text" id="username" required />
-              <label for="email">Email:</label>
-              <input type="email" id="email" required />
-              <label for="address">Address:</label>
-              <input type="text" id="address" required />
-              <label for="age">Age:</label>
-              <input type="number" id="age" required />
-              <label for="gender">Gender:</label>
-              <select id="gender" required>
-                <option value="" disabled selected>Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-              <button type="submit" class="submit-btn">Submit</button>
-            </form>
-          </div>
+      <!-- Form Modal -->
+      <div id="formModal" class="modal1">
+        <div class="modal_content">
+          <span class="close-btn" id="closeFormModal">&times;</span>
+          <h3>Book Your Test</h3>
+          <form id="testForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <label for="address">Address:</label>
+            <input type="text" id="address" required />
+            <label for="age">Age:</label>
+            <input type="number" id="age" required />
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+              <option value="" disabled selected>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
         </div>
-
-        <!-- Confirmation Modal -->
-        <div id="confirmationModal" class="modal1">
-          <div class="modal_content">
-            <span class="close-btn" id="closeConfirmationModal">&times;</span>
-            <h3>Success</h3>
-            <p>Your test has been successfully booked!</p>
-            <button id="okButton" class="ok-btn">OK</button>
-          </div>
-        </div>
-
-        <section id="why-choose-us" class="why-choose-us">
-          <div class="container scroll-section">
-            <div class="content">
-              <h2 class="scroll-content">Why Choose Us?</h2>
-              <p class="scroll-content">
-                Here's why our lab is trusted by thousands of customers:
-              </p>
-              <div class="progress-bars scroll-content">
-                <div class="progress-item">
-                  <h3 style="display: inline-block">Accuracy of Results</h3>
-                  <span style="float: right">95%</span>
-                  <div class="progress-bar">
-                    <div class="fill" data-value="95"></div>
-                  </div>
-                </div>
-                <div class="progress-item">
-                  <h3 style="display: inline-block">Quick Turnaround Time</h3>
-                  <span style="float: right">90%</span>
-                  <div class="progress-bar">
-                    <div class="fill" data-value="90"></div>
-                  </div>
-                </div>
-                <div class="progress-item">
-                  <h3 style="display: inline-block">Sample Preparation</h3>
-                  <span style="float: right">85%</span>
-                  <div class="progress-bar">
-                    <div class="fill" data-value="85"></div>
-                  </div>
-                </div>
-                <div class="progress-item">
-                  <h3 style="display: inline-block">Lab Equipment Rating</h3>
-                  <span style="float: right">98%</span>
-                  <div class="progress-bar">
-                    <div class="fill" data-value="98"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="scroll-content">
-              <div class="image-container scroll-image">
-                <img
-                  src="cars/Screenshot 2024-07-07 092045.png"
-                  alt="Lab Equipment"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="faqs">
-          <div class="faq-container">
-            <div class="faq-header">
-              <h1>Frequently Asked Questions</h1>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What services do you provide?</span>
-                <span>+</span>
-              </div>
-              <div class="faq-answer">
-                We provide a variety of diagnostic tests, including blood tests,
-                imaging, and health check-up packages tailored to your needs.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>How can I book a test?</span>
-                <span>+</span>
-              </div>
-              <div class="faq-answer">
-                You can book a test online through our website or by calling our
-                customer care number. Walk-ins are also welcome.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What are your operating hours?</span>
-                <span>+</span>
-              </div>
-              <div class="faq-answer">
-                Our laboratory is open from 7:00 AM to 8:00 PM from Monday to
-                Saturday and 8:00 AM to 2:00 PM on Sundays.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Do you provide home sample collection?</span>
-                <span>+</span>
-              </div>
-              <div class="faq-answer">
-                Yes, we offer home sample collection services. Please contact us
-                to schedule a convenient time.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" class="about-container">
-          <div class="about-content">
-            <h2>About Us</h2>
-            <p>
-              Patho Plus Laboratory is a state-of-the-art diagnosticcenter
-              dedicated to providing accurate and reliable results. Our expert
-              team ensures every test is conducted withprecision and care,
-              making us a trusted partner in healthcare.
-            </p>
-            <p>
-              With advanced technology, a wide range of services, and
-              acommitment to excellence, we strive to deliver quality healthcare
-              solutions to our community.
-            </p>
-            <button id="learn-more-btn">Learn More</button>
-          </div>
-          <div class="about-image">
-            <img src="patho-lab.jpg" alt="Laboratory" />
-          </div>
-        </section>
-
-        <!-- Footer Section -->
-        <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <!-- Contact Us Section -->
-              <div class="col-md-4">
-                <h5>Contact Us</h5>
-                <p>
-                  <strong>Patho Plus Lab</strong>
-                  <br />
-                  <br />
-                  Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
-                  Swaminarayan School, Cadila Road, Ghodasar, A'bad.
-                  <br />
-                  <br />
-                  Contact: +91 73830 61632
-                  <br />
-                  <br />
-                  Email:
-                  <a href="mailto:info@pathopluslab.com"
-                    >info@pathopluslab.com</a
-                  >
-                </p>
-              </div>
-
-              <!-- Quick Links Section -->
-              <div class="col-md-4">
-                <h5>Quick Links</h5>
-                <ul class="social-links">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Tests</a></li>
-                  <li><a href="#">FAQs</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-
-              <!-- Social Media Section -->
-              <div class="col-md-4">
-                <h5>Follow Us</h5>
-                <ul class="social-links">
-                  <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
-          ↑
-        </button>
       </div>
+
+      <!-- Confirmation Modal -->
+      <div id="confirmationModal" class="modal1">
+        <div class="modal_content">
+          <span class="close-btn" id="closeConfirmationModal">&times;</span>
+          <h3>Success</h3>
+          <p>Your test has been successfully booked!</p>
+          <button id="okButton" class="ok-btn">OK</button>
+        </div>
+      </div>
+
+      <!-- wcu -->
+
+      <section class="scroll-section">
+        <div class="scroll-content">
+          <div class="scroll-image">
+            <img src="cars/Screenshot 2024-07-07 091950.png" alt="Placeholder Image" />
+          </div>
+          <div class="scroll-text">
+            <h2 class="scroll-content">Why Choose Us?</h2>
+            <p class="scroll-content">
+              Here's why our lab is trusted by thousands of customers:
+            </p>
+            <div class="progress-bars scroll-content">
+              <div class="progress-item">
+                <h3 style="display: inline-block">Accuracy of Results</h3>
+                <span style="float: right">95%</span>
+                <div class="progress-bar">
+                  <div class="fill" data-value="95"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <h3 style="display: inline-block">Quick Turnaround Time</h3>
+                <span style="float: right">90%</span>
+                <div class="progress-bar">
+                  <div class="fill" data-value="90"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <h3 style="display: inline-block">Sample Preparation</h3>
+                <span style="float: right">85%</span>
+                <div class="progress-bar">
+                  <div class="fill" data-value="85"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <h3 style="display: inline-block">Lab Equipment Rating</h3>
+                <span style="float: right">98%</span>
+                <div class="progress-bar">
+                  <div class="fill" data-value="98"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faqs -->
+
+      <section id="faqs">
+        <div class="faq-container">
+          <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What services do you provide?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              We provide a variety of diagnostic tests, including blood tests,
+              imaging, and health check-up packages tailored to your needs.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How can I book a test?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              You can book a test online through our website or by calling our
+              customer care number. Walk-ins are also welcome.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What are your operating hours?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              Our laboratory is open from 7:00 AM to 8:00 PM from Monday to
+              Saturday and 8:00 AM to 2:00 PM on Sundays.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you provide home sample collection?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              Yes, we offer home sample collection services. Please contact us
+              to schedule a convenient time.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-container">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>
+            Patho Plus Laboratory is a state-of-the-art diagnosticcenter
+            dedicated to providing accurate and reliable results. Our expert
+            team ensures every test is conducted withprecision and care,
+            making us a trusted partner in healthcare.
+          </p>
+          <p>
+            With advanced technology, a wide range of services, and
+            acommitment to excellence, we strive to deliver quality healthcare
+            solutions to our community.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="patho-lab.jpg" alt="Laboratory" />
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <!-- Contact Us Section -->
+            <div class="col-md-4">
+              <h5>Contact Us</h5>
+              <p>
+                <strong>Patho Plus Lab</strong>
+                <br />
+                <br />
+                Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
+                Swaminarayan School, Cadila Road, Ghodasar, A'bad.
+                <br />
+                <br />
+                Contact: +91 73830 61632
+                <br />
+                <br />
+                Email:
+                <a href="mailto:info@pathopluslab.com">info@pathopluslab.com</a>
+              </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+              <h5>Quick Links</h5>
+              <ul class="social-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="test.html">Tests</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+              </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="col-md-4">
+              <h5>Follow Us</h5>
+              <ul class="social-links">
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-github"></i> Github</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
+        ↑
+      </button>
     </div>
-    <script src="js/modal.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/scrollEffect.js"></script>
-    <script src="js/card.js"></script>
-    <script src="js/WCU.js"></script>
-    <script src="js/faqs.js"></script>
-    <script src="js/backToTop.js"></script>
-  </body>
+  </div>
+  <script src="js/modal.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/scrollEffect.js"></script>
+  <script src="js/card.js"></script>
+  <script src="js/WCU.js"></script>
+  <script src="js/faqs.js"></script>
+  <script src="js/backToTop.js"></script>
+</body>
+
 </html>

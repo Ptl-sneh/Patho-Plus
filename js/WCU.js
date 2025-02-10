@@ -1,32 +1,24 @@
-const scrollsection = document.querySelectorAll(".container");
+// Wait for the HTML content to load before running the script
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all progress items (each containing a progress bar)
+  const progressItems = document.querySelectorAll(".progress-item");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector("#why-choose-us");
-    const image = section.querySelector(".image-container");
-    const progressBars = section.querySelectorAll(".progress-bar .fill");
+  // Function to animate the progress bars when they come into view
+  function animateProgressBars() {
+    progressItems.forEach((item) => {
+      const bar = item.querySelector(".fill"); // Get the inner fill bar
+      const value = bar.getAttribute("data-value"); // Read percentage value
 
-    // Function to check if section is visible
-    function checkVisibility() {
-        const sectionTop = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
+      // Check if the progress item is visible in the viewport
+      if (item.getBoundingClientRect().top < window.innerHeight - 100) {
+        bar.style.width = value + "%"; // Set the width dynamically
+      }
+    });
+  }
 
-        if (sectionTop < viewportHeight - 100) {
-            // Add class to make the image visible
-            image.classList.add("visible");
+  // Run the function when the user scrolls
+  window.addEventListener("scroll", animateProgressBars);
 
-            // Fill progress bars
-            progressBars.forEach((bar) => {
-                const value = bar.getAttribute("data-value");
-                bar.style.width = value + "%";
-            });
-
-            // Remove the scroll listener to avoid repeated triggering
-            window.removeEventListener("scroll", checkVisibility);
-        } else {
-            image.classList.remove("visible");
-        }
-    }
-
-    // Add scroll event listener
-    window.addEventListener("scroll", checkVisibility);
+  // Run the function immediately in case the progress bars are already in view
+  animateProgressBars();
 });

@@ -3,79 +3,107 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  flex-direction: wrap;
   top: 0px;
 }
 
-.display_pro {
-  position: relative;
-  max-width:100%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: blue;
-}
+/* health packages card */
 
-.sec {
-  position: relative;
-  top: 50px;
-}
-
-section h2 {
-  text-align: center;
-}
-
-.test-card {
-  width: 300px;
+.health {
+  margin: 20px;
+  /* width: 550px; */
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  background-color: lightgray;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.med_con {
+.display_pro {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
+}
+
+.sec {
+  position: relative;
+  top: 30px;
+}
+
+section h2 {
+  text-align: center;
+}
+
+/* most popular test's card */
+.test-card {
+  width: 300px;
+  height: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* test cards */
+.med_con {
   width: 250px;
   height: 250px;
+  padding: 20px;
   background-color: lightgray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* flipping */
 
 .card12 {
+  border-color: lightgray;
   width: 100%;
   height: 100%;
-  /* position: relative; */
+  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
   cursor: pointer;
 }
 
-.card12.flipped {
+.card12.flip {
+  border-color: lightgray;
   transform: rotateY(180deg);
 }
 
 .card12 .side {
+
   position: absolute;
   width: 100%;
-  height: 100%;
   backface-visibility: hidden;
-  font-size: 20px;
+  height: 100%;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 10px;
+  border-color: lightgray;
 }
 
 .front {
+  border-color: lightgray;
+  background-color: lightgray;
+
+  border: none;
   color: black
 }
 
 .back {
+  background-color: lightgray;
+  border-color: lightgray;
+  border: none;
   color: black;
   transform: rotateY(180deg);
 }
@@ -85,8 +113,21 @@ section h2 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
+
+.med_con:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+
+.health:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
 .test-card img {
-  width: 100%;
+  width: 25%;
+  height: 25%;
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
@@ -123,16 +164,15 @@ section h2 {
   transform: translateY(8px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
   .popular-tests {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .display_pro{
+
+  .display_pro {
     max-width: 100%;
-    left: 10px;
-    background-color: red;
   }
 }
 
@@ -284,6 +324,7 @@ select {
     opacity: 0;
     scale: 0.4;
   }
+
   to {
     opacity: 1;
     scale: 1;
