@@ -10,7 +10,9 @@
 
 .health {
   margin: 20px;
+  max-width: 100%;
   /* width: 550px; */
+  background-color: #218838;
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
@@ -82,7 +84,6 @@ section h2 {
 }
 
 .card12 .side {
-
   position: absolute;
   width: 100%;
   backface-visibility: hidden;
@@ -97,7 +98,7 @@ section h2 {
   background-color: lightgray;
 
   border: none;
-  color: black
+  color: black;
 }
 
 .back {
@@ -113,12 +114,10 @@ section h2 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
-
 .med_con:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
-
 
 .health:hover {
   transform: translateY(-10px);
