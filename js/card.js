@@ -7,7 +7,9 @@ const modalContent2 = modal2.querySelector(".modal_content");
 const openModalBtn = document.querySelectorAll(".openModal");
 
 const closeFormModalBtn = document.getElementById("closeFormModal");
-const closeConfirmationModalBtn = document.getElementById("closeConfirmationModal");
+const closeConfirmationModalBtn = document.getElementById(
+  "closeConfirmationModal"
+);
 const okButton = document.getElementById("okButton");
 
 openModalBtn.forEach((button) => {
@@ -100,7 +102,6 @@ window.addEventListener("click", (event) => {
 });
 
 // flip
-
 
 function flipCard(card) {
   card.classList.toggle("flip");

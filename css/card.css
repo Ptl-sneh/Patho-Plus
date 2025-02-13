@@ -4,15 +4,16 @@
   flex-wrap: wrap;
   justify-content: center;
   top: 0px;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* health packages card */
 
 .health {
-  margin: 20px;
-  max-width: 100%;
-  /* width: 550px; */
-  background-color: #218838;
+  width: 100%;
+  max-width: 550px;
+  background-color: rgb(165, 158, 158);
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
@@ -21,6 +22,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .display_pro {
   position: relative;
@@ -46,7 +48,7 @@ section h2 {
 /* most popular test's card */
 .test-card {
   width: 300px;
-  height: 280px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -57,15 +59,35 @@ section h2 {
 
 /* test cards */
 .med_con {
+  align-items: center;
   width: 250px;
   height: 250px;
   padding: 20px;
-  background-color: lightgray;
+  flex-shrink: 0;
+  /* background-color: lightgray; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dp {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.scroll_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* flipping */
@@ -153,7 +175,7 @@ section h2 {
   margin-top: 15px;
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #28a745;
+  background-color: orangered;
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
@@ -161,7 +183,7 @@ section h2 {
 }
 
 .btn-book-now:hover {
-  background-color: #218838;
+  background-color: darkturquoise;
   transform: translateY(8px);
 }
 
@@ -331,6 +353,7 @@ select {
     scale: 1;
   }
 }
+
 /* From Uiverse.io by Voxybuns */
 button {
   /* Variables */
