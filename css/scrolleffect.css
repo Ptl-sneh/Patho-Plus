@@ -100,6 +100,7 @@
 
 
     .scroll-text {
+        margin-top: 18px;
         position:relative;
         width: 100%;
         max-width: none;
