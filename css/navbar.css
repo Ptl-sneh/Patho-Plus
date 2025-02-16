@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-    background-color: black !important;
+    background-color: #3da1ff !important;
 }
 
 .navbar-brand img {
@@ -78,7 +78,7 @@ body {
 }
 
 .a:hover {
-    background-color: #555;
+    background-color: #0056B3;
     border-radius: 4px;
 }
 
@@ -86,10 +86,6 @@ body {
     width: 100%;
 }
 
-/* Location Link Color Change */
-.selected-location {
-    color: yellow;
-}
 
 .dropdown_menu{
     display: none;
@@ -98,7 +94,7 @@ body {
     left: 5px;
     color: white;
     border-radius:10px ;
-    background-color: #444;
+    background-color: #008080;
     min-width: 150px;
     list-style: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);

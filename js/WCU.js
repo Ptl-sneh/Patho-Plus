@@ -1,24 +1,27 @@
-// Wait for the HTML content to load before running the script
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all progress items (each containing a progress bar)
-  const progressItems = document.querySelectorAll(".progress-item");
+const progressBars = document.querySelectorAll(".fill");
+const image = document.querySelector(".scroll-image");
 
-  // Function to animate the progress bars when they come into view
-  function animateProgressBars() {
-    progressItems.forEach((item) => {
-      const bar = item.querySelector(".fill"); // Get the inner fill bar
-      const value = bar.getAttribute("data-value"); // Read percentage value
+function showProgress() {
+  progressBars.forEach((bar) => {
+    if (bar.getBoundingClientRect().top < window.innerHeight - 100) {
+      bar.style.width = bar.getAttribute("data-value") + "%";
+    }
+  });
+}
 
-      // Check if the progress item is visible in the viewport
-      if (item.getBoundingClientRect().top < window.innerHeight - 100) {
-        bar.style.width = value + "%"; // Set the width dynamically
-      }
-    });
+function showImage() {
+  if (image.getBoundingClientRect().top < window.innerHeight - 100) {
+    image.classList.add("visible");
   }
+}
 
-  // Run the function when the user scrolls
-  window.addEventListener("scroll", animateProgressBars);
+function handleScroll() {
+  showProgress();
+  showImage();
+}
 
-  // Run the function immediately in case the progress bars are already in view
-  animateProgressBars();
-});
+// Run the function when the page scrolls
+window.addEventListener("scroll", handleScroll);
+
+// Run once in case elements are already visible on load
+// handleScroll();
