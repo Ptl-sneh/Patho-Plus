@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/backtotop.css" />
+  <link rel="stylesheet" href="css/testss.css" />
+  <link rel="stylesheet" href="css/modal.css" />
 </head>
 
 <body>
@@ -76,6 +78,7 @@
         <div class="d-flex">
           <a href="login.html" target="_blank" class="btn me-2">Login</a>
           <a href="sign_up.html" target="_blank" class="btn">Sign Up</a>
+          <link rel="stylesheet" href="css/testss.css">
         </div>
       </div>
     </nav>
@@ -292,42 +295,44 @@
     <div class="dp">
       <div class="animation1 med_con">
         <img src="cars/heart.png" alt="" height="100px" width="100px" />
+        <br>
+        <br>
         <h3>Heart</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/liver.png" alt="" height="50px" width="50px" />
+        <img src="cars/liver.png" alt="" height="100px" width="100px" />
         <h3>Liver</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/kidney.png" alt="" height="50px" width="50px" />
+        <img src="cars/kidney.png" alt="" height="100px" width="100px" />
         <h3>Kidney</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/intestine.png" alt="" height="50px" width="50px" />
+        <img src="cars/intestine.png" alt="" height="100px" width="100px" />
         <h3>Intestines</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/stomach.png" alt="" height="50px" width="50px" />
+        <img src="cars/stomach.png" alt="" height="100px" width="100px" />
         <h3>Stomach</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/pancreas.png" alt="" height="50px" width="50px" />
+        <img src="cars/pancreas.png" alt="" height="100px" width="100px" />
         <h3>Pancreas</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/muscle.png" alt="" height="50px" width="50px" />
+        <img src="cars/muscle.png" alt="" height="100px" width="100px" />
         <h3>Muscles</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/thyroid-gland.png" alt="" height="50px" width="50px" />
+        <img src="cars/thyroid-gland.png" alt="" height="100px" width="100px" />
         <h3>Thyroid</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/brainstorm.png" alt="" height="50px" width="50px" />
+        <img src="cars/brainstorm.png" alt="" height="100px" width="100px" />
         <h3>Brain</h3>
       </div>
       <div class="animation1 med_con">
-        <img src="cars/arthritis.png" alt="" height="50px" width="50px" />
+        <img src="cars/arthritis.png" alt="" height="100px" width="100px" />
         <h3>Joints</h3>
       </div>
     </div>
@@ -340,6 +345,136 @@
       <h3>Success</h3>
       <p>Your test has been successfully booked!</p>
       <button id="okButton" class="ok-btn">OK</button>
+    </div>
+  </div>
+
+  <h1 style="margin-top: 100px; margin-left: 60px">Test Categories</h1>
+  <div class="container18">
+    <!-- Sidebar -->
+    <div class="categories1">
+
+      <div class="dropdown1" onclick="toggleDropdown1('medical-conditions')">Test by Medical Conditions ▼</div>
+      <div id="medical-conditions" class="dropdown1-content">
+        <button onclick="filterTests('Diabetes')">Diabetes</button>
+        <button onclick="filterTests('Heart Disease')">Heart Disease</button>
+        <button onclick="filterTests('Fever')">Fever</button>
+        <button onclick="filterTests('Allergy')">Allergy</button>
+        <button onclick="filterTests('Infection')">Infection</button>
+      </div>
+
+      <div class="dropdown1" onclick="toggleDropdown1('body-parts')" style="font-size:16px ;">Test by Body Parts ▼</div>
+      <div id="body-parts" class="dropdown1-content">
+        <button onclick="filterTests('Heart')">Heart</button>
+        <button onclick="filterTests('Liver')">Liver</button>
+        <button onclick="filterTests('Kidney')">Kidney</button>
+        <button onclick="filterTests('Intestines')">Intestines</button>
+        <button onclick="filterTests('Stomach')">Stomach</button>
+        <button onclick="filterTests('Pancreas')">Pancreas</button>
+        <button onclick="filterTests('Muscle')">Muscles</button>
+        <button onclick="filterTests('Thyroid')">Thyroid</button>
+        <button onclick="filterTests('Brain')">Brain</button>
+        <button onclick="filterTests('Joints')">Joints</button>
+      </div>
+
+      <div class="all-tests-btn1" onclick="filterTests('All')">View All Tests</div>
+    </div>
+
+    <!-- Test List Section -->
+
+    <div class="test-content1" id="all-tests">
+      <h3 id="head">All</h3>
+      <div class="test-cards1">
+        <div class="test-card1" data-category="Heart">
+          <span>₹500</span>
+          <h4>ECG</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>⚠️ No preparation needed</p>
+        </div>
+        <div class="test-card1" data-category="Liver">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Kidney">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Intestines">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Stomach">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Pancreas">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Muscle">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Thyroid">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Brain">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Joints">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Diabetes">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Heart Disease">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Fever">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Allergy">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+        <div class="test-card1" data-category="Infection">
+          <span>₹700</span>
+          <h4>Cholesterol Test</h4>
+          <p>📋 Includes: 3 tests</p>
+          <p>⚠️ 12-hour fasting required</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -367,9 +502,9 @@
         <div class="col-md-4" style="padding-bottom: 53px">
           <h5>Quick Links</h5>
           <p style="padding-right: 30px">
-            <a href="#">Home</a>
+            <a href="home.html">Home</a>
             <br />
-            <a href="test.html" target="_blank">Tests</a>
+            <a href="#">Tests</a>
             <br />
           </p>
         </div>
@@ -378,15 +513,15 @@
         <div class="col-md-4" style="padding-bottom: 25px">
           <h5>Follow Us</h5>
           <p>
-            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
             <br />
-            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href ="https://x.com/?lang=en&mx=2" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
             <br />
-            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             <br />
-            <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/patel-sneh-269125319/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
             <br />
-            <a href="#"><i class="fab fa-github"></i> Github</a>
+            <a href="https://github.com/Ptl-sneh" target="_blank"><i class="fab fa-github"></i> Github</a>
             <br />
           </p>
         </div>
@@ -403,6 +538,7 @@
   <script src="js/modal.js"></script>
   <script src="js/backToTop.js"></script>
   <script src="js/flip.js"></script>
+  <script src="js/testss.js"></script>
 </body>
 
 </html>
