@@ -22,3 +22,9 @@ function filterTests(category) {
     }
   }
 }
+
+// Function to open the view details modal
+
+
+
+

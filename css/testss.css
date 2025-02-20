@@ -80,6 +80,7 @@
 }
 
 .test-cards1 {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -88,7 +89,8 @@
 
 .test-card1 {
     background: white;
-    max-width: 300px;
+    max-width: 400px;
+    width: 100%;
     padding: 18px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -114,6 +116,27 @@
 }
 
 
+
+
+@media (max-width: 1140px) {
+    .test-cards1 {
+        justify-content: start;
+    }
+    .test-card1 {
+        max-width: 320px;
+        width: 100%;
+    }   
+}
+
+@media (max-width: 898px) {
+    .test-cards1 {
+        justify-content: center;
+    }
+    .test-card1 {
+        max-width: 400px;
+        width: 100%;
+    }
+}
 @media (max-width: 568px) {
     .container18 {
         flex-direction: column;
@@ -128,12 +151,5 @@
 
     .test-cards1 {
         justify-content: center;
-    }
-}
-
-@media (max-width: 717px) {
-    .test-cards1 {
-        justify-content: center;
-
     }
 }

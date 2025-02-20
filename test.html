@@ -209,6 +209,16 @@
     </div>
   </div>
 
+    <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal1">
+    <div class="modal_content">
+      <span class="close-btn" id="closeConfirmationModal">&times;</span>
+      <h3>Success</h3>
+      <p>Your test has been successfully booked!</p>
+      <button id="okButton" class="ok-btn">OK</button>
+    </div>
+  </div>
+
   <!-- Test by medical conditions -->
 
   <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">
@@ -366,15 +376,7 @@
     </div>
   </div>
 
-  <!-- Confirmation Modal -->
-  <div id="confirmationModal" class="modal1">
-    <div class="modal_content">
-      <span class="close-btn" id="closeConfirmationModal">&times;</span>
-      <h3>Success</h3>
-      <p>Your test has been successfully booked!</p>
-      <button id="okButton" class="ok-btn">OK</button>
-    </div>
-  </div>
+
 
   <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">Test Categories</h1>
   <div class="container18">
@@ -417,94 +419,120 @@
           <h4>ECG</h4>
           <p>📋 Includes: 1 test</p>
           <p>⚠️ No preparation needed</p>
+          <button class="btn-book-now openModal">Book Now</button>
+          <button class="btn-book-now view-details">View Details</button>
         </div>
         <div class="test-card1" data-category="Liver">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Kidney">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Intestines">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Stomach">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Pancreas">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Muscle">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Thyroid">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Brain">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Joints">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Diabetes">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Heart Disease">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Fever">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Allergy">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
         <div class="test-card1" data-category="Infection">
           <span>₹700</span>
           <h4>Cholesterol Test</h4>
           <p>📋 Includes: 3 tests</p>
           <p>⚠️ 12-hour fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- View Details Modal -->
+  <div id="viewDetailsModal" class="modal1">
+    <div class="modal_content">
+      <span class="close-btn" id="closeViewDetailsModal">&times;</span>
+      <h3>Test Details</h3>
+      <div id="testDetailsContent"></div>
+    </div>
+    
+  
 
   <!-- Footer -->
   <footer class="footer">
