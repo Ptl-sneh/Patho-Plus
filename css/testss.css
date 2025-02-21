@@ -9,14 +9,15 @@
 }
 
 .categories1 {
-    width: 100%;
-    max-width: 300px;
-    background: linear-gradient(45deg, rgba(65, 172, 234, 0.968), rgba(21, 72, 239, 0.881));
+    max-width: 400px;
+    width: 170%;
+    background: linear-gradient(45deg, rgb(167, 219, 248), rgba(21, 72, 239, 0.881));
     color: black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
+    height: max-content;
 }
 
 .dropdown1 {
@@ -44,11 +45,11 @@
 }
 
 .all-tests-btn1:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(106, 185, 254, 0.932);
 }
 
 .dropdown1:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(106, 185, 254, 0.932);
 }
 
 .dropdown1-content {
@@ -65,13 +66,14 @@
     gap: 5px;
 }
 .dropdown1-content button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid black;
+    background: rgba(106, 185, 254, 0.932);
+    border: 1px solid rgba(106, 185, 254, 0.932);
     border-radius: 10px;
 
 }
 
 .test-content1 {
+    /* width: 140%;  */
     flex-grow: 1;
     padding: 25px;
     overflow: auto;
@@ -89,7 +91,8 @@
 
 .test-card1 {
     background: white;
-    max-width: 400px;
+    max-width: 440px;
+    height: max-content;
     width: 100%;
     padding: 18px;
     border-radius: 10px;

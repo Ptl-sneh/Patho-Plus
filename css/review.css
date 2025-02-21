@@ -1,0 +1,54 @@
+.review-section {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-container {
+
+    position: relative;
+    min-height: 100px;
+}
+
+.review {
+    display: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.review.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.revbutton {
+    background: #007bffeb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.revbutton:hover {
+    background: #007bffeb;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

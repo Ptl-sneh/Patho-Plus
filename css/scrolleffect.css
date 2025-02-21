@@ -71,7 +71,7 @@
 
 @keyframes slideInRight {
     from {
-        transform: translateZ(100%);
+        transform: translateX(100%);
     }
 
     to {

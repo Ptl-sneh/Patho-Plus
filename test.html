@@ -13,6 +13,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
   <link rel="stylesheet" href="css/card.css" />
   <link rel="stylesheet" href="css/carousel.css" />
   <link rel="stylesheet" href="css/navbar.css" />
@@ -20,6 +23,8 @@
   <link rel="stylesheet" href="css/backtotop.css" />
   <link rel="stylesheet" href="css/testss.css" />
   <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/homeVisit.css" />
+  <link rel="stylesheet" href="css/review.css">
 </head>
 
 <body>
@@ -140,7 +145,7 @@
       </div>
     </div>
   </div>
-  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">
+  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;" data-aos="fade-up">
     Health Checkup Packages
   </h1>
 
@@ -184,7 +189,7 @@
   <!-- Trigger Button <button id="openFormModal" class="open-modal-btn">Open Form </button> -->
 
   <!-- Form Modal -->
-  <div id="formModal" class="modal1">
+  <div id="formModal" class="modal1" data-aos="fade-up">
     <div class="modal_content">
       <span class="close-btn" id="closeFormModal">&times;</span>
       <h3>Book Your Test</h3>
@@ -209,8 +214,8 @@
     </div>
   </div>
 
-    <!-- Confirmation Modal -->
-  <div id="confirmationModal" class="modal1">
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal1" data-aos="fade-up">
     <div class="modal_content">
       <span class="close-btn" id="closeConfirmationModal">&times;</span>
       <h3>Success</h3>
@@ -221,7 +226,7 @@
 
   <!-- Test by medical conditions -->
 
-  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">
+  <h1 style="margin-top: 100px; text-align: center; color: #0056b3; " data-aos="fade-up">
     Test By Medical Conditions
   </h1>
 
@@ -310,8 +315,8 @@
 
   <!-- Test by body parts -->
 
-  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">Test By Body Parts</h1>
-  <div class="scroll_container">
+  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;" data-aos="fade-up">Test By Body Parts</h1>
+  <div class="scroll_container" data-aos="fade-up">
     <div class="dp">
       <div class="animation1 med_con">
         <img src="images/heart.png" alt="" height="100px" width="100px" />
@@ -378,8 +383,8 @@
 
 
 
-  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;">Test Categories</h1>
-  <div class="container18">
+  <h1 style="margin-top: 100px; text-align: center; color: #0056b3;" data-aos="fade-up">Test Categories</h1>
+  <div class="container18" data-aos="fade-up">
     <!-- Sidebar -->
     <div class="categories1">
 
@@ -414,125 +419,333 @@
     <div class="test-content1" id="all-tests">
       <h3 id="head">All</h3>
       <div class="test-cards1">
+
         <div class="test-card1" data-category="Heart">
           <span>₹500</span>
-          <h4>ECG</h4>
+          <h4>ECG (Electrocardiogram)</h4>
           <p>📋 Includes: 1 test</p>
-          <p>⚠️ No preparation needed</p>
+          <p>📌 No preparation needed</p>
           <button class="btn-book-now openModal">Book Now</button>
           <button class="btn-book-now view-details">View Details</button>
         </div>
+
         <div class="test-card1" data-category="Liver">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹800</span>
+          <h4>Liver Function Test (LFT)</h4>
+          <p>📋 Includes: 7 tests</p>
+          <p>📌 8-12 hour fasting recommended</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
         <div class="test-card1" data-category="Kidney">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹800</span>
+          <h4>Kidney Function Test (KFT / RFT)</h4>
+          <p>📋 Includes: 7 tests</p>
+          <p>📌 No fasting required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Kidney">
+          <span>₹350</span>
+          <h4>Blood Urea Nitrogen (BUN) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No fasting required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
         <div class="test-card1" data-category="Intestines">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹900</span>
+          <h4>Stool Culture Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No antibiotics before the test</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Intestines">
+          <span>₹1000</span>
+          <h4>H. Pylori Antigen Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No antibiotics or acid-reducing medicines before the test</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Stomach">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹1000</span>
+          <h4>H. Pylori Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No antibiotics or acid-reducing medicines before the test</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Stomach">
+          <span>₹1300</span>
+          <h4>Serum Gastrin Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 12-hour fasting required before the test</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Pancreas">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹900</span>
+          <h4>Lipase Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Pancreas">
+          <span>₹800</span>
+          <h4>Amylase Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 12-hour fasting required before the test</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
         <div class="test-card1" data-category="Muscle">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹800</span>
+          <h4>Creatine Kinase (CK) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Muscle">
+          <span>₹1000</span>
+          <h4>Myoglobin Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Thyroid">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹500</span>
+          <h4>Thyroid Stimulating Hormone (TSH) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Thyroid">
+          <span>₹650</span>
+          <h4>Free T4 (Thyroxine) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Brain">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹1500</span>
+          <h4>Electroencephalogram (EEG) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 Avoid caffeine before the test</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Brain">
+          <span>₹3000</span>
+          <h4>CT Scan Brain</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required, but inform about pregnancy</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Joints">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹800</span>
+          <h4>Rheumatoid Factor (RF) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Joints">
+          <span>₹1200</span>
+          <h4>Anti-CCP Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Diabetes">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹800</span>
+          <h4>HbA1c (Glycated Hemoglobin) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No fasting required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Diabetes">
+          <span>₹400</span>
+          <h4>Random Blood Sugar (RBS) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
         <div class="test-card1" data-category="Heart Disease">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹2000</span>
+          <h4>2D Echocardiography (ECHO)</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+
         <div class="test-card1" data-category="Fever">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹500</span>
+          <h4>Complete Blood Count (CBC) Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Fever">
+          <span>₹600</span>
+          <h4>Malaria Test (MP Smear/RDT)</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Allergy">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹1200</span>
+          <h4>IgE Allergy Test</h4>
+          <p>📋 Includes: 1 test</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Allergy">
+          <span>₹1800</span>
+          <h4>Dust & Pollen Allergy Test</h4>
+          <p>📋 Includes: Multiple environmental allergen tests</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
         <div class="test-card1" data-category="Infection">
-          <span>₹700</span>
-          <h4>Cholesterol Test</h4>
-          <p>📋 Includes: 3 tests</p>
-          <p>⚠️ 12-hour fasting required</p>
+          <span>₹500</span>
+          <h4>Complete Blood Count (CBC) Test</h4>
+          <p>📋 Includes: Blood cell analysis</p>
+          <p>📌 No special preparation required</p>
           <button class="btn-book-now openModal">Book Now</button>
         </div>
+
+        <div class="test-card1" data-category="Infection">
+          <span>₹600</span>
+          <h4>Widal Test</h4>
+          <p>📋 Includes: Typhoid diagnosis</p>
+          <p>📌 No special preparation required</p>
+          <button class="btn-book-now openModal">Book Now</button>
+        </div>
+
+
       </div>
     </div>
   </div>
 
-  <!-- View Details Modal -->
-  <div id="viewDetailsModal" class="modal1">
-    <div class="modal_content">
-      <span class="close-btn" id="closeViewDetailsModal">&times;</span>
-      <h3>Test Details</h3>
-      <div id="testDetailsContent"></div>
+
+
+  <h2>Book a Home Visit</h2>
+  <form id="homeVisitForm">
+
+    <div class="input-group">
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+      </div>
     </div>
-    
-  
+
+    <div class="input-group">
+      <div>
+        <label for="email">Email (Optional):</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div>
+        <label for="branch">Select Branch:</label>
+        <select id="branch" name="branch" required>
+          <option value="" disabled selected>Select your branch</option>
+          <option value="ghodasar">Ghodasar</option>
+          <option value="isanpur">Isanpur</option>
+          <option value="nickol">Nickol</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div>
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div>
+        <label for="test">Select Test:</label>
+        <select id="test" name="test" required>
+          <option value="" disabled selected>Select a test</option>
+          <option value="cbc">Complete Blood Count (CBC)</option>
+          <option value="cholesterol">Cholesterol Test</option>
+          <option value="sugar">Blood Sugar Test</option>
+          <option value="thyroid">Thyroid Function Test</option>
+          <option value="liver">Liver Function Test</option>
+          <option value="kidney">Kidney Function Test</option>
+        </select>
+
+      </div>
+      <div>
+
+        <label for="address">Full Address:</label>
+        <textarea id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="formbutton" id="homeVisitForm" onclick="bookHomeVisit()">Book Home Visit</button>
+
+  </form>
+
+  <p id="confirmationMessage" style="display: none; color: #007bffeb; font-weight: bold;"></p>
+
+  <div class="review-section" style="margin-top: 50px;">
+    <h2>Patient Reviews</h2>
+    <div class="review-container">
+      <div class="review active">
+        <p>"The service was excellent! My test reports were delivered on time. Highly recommended!"</p>
+        <div class="stars">★★★★★</div>
+        <h4>- Patient 1</h4>
+      </div>
+      <div class="review">
+        <p>"I booked a home visit, and the staff was very professional. Smooth experience!"</p>
+        <div class="stars">★★★★☆</div>
+        <h4>- Patient 2</h4>
+      </div>
+      <div class="review">
+        <p>"The lab results were accurate, and the turnaround time was impressive. Very satisfied!"</p>
+        <div class="stars">★★★★★</div>
+        <h4>- Patient 3</h4>
+      </div>
+    </div>
+    <button class="revbutton" onclick="prevReview()">❮ Previous</button>
+    <button class="revbutton" onclick="nextReview()">Next ❯</button>
+  </div>
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -553,7 +766,8 @@
               Contact: +91 73830 61632
               <br />
               Email:
-              <a href="mailto:info@pathopluslab.com" style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
+              <a href="mailto:info@pathopluslab.com"
+                style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
             </p>
           </div>
           <div>
@@ -561,14 +775,13 @@
               <strong style="color: #74b5fc;">Isanpur Branch</strong>
               <br />
               <br />
-              Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
-              <br>
-              Swaminarayan School, Cadila Road, Ghodasar,A'bad.
+              New Vatva Rd, Isanpur, Ahmedabad, Gujarat 380043
               <br />
               Contact: +91 73830 61632
               <br />
               Email:
-              <a href="mailto:info@pathopluslab.com" style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
+              <a href="mailto:info@pathopluslab.com"
+                style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
             </p>
           </div>
           <div>
@@ -576,14 +789,15 @@
               <strong style="color: #74b5fc;">Nickol Branch</strong>
               <br />
               <br />
-              Main Lab: 5,6,8, Krishna Complex, Nr. Pavitranagar, Nr.
+              1st floor, saligram lake view, near Kanba Hospital,
               <br>
-              Swaminarayan School, Cadila Road, Ghodasar, A'bad.
+              Nikol, Ahmedabad, Gujarat 382350
               <br />
               Contact: +91 73830 61632
               <br />
               Email:
-              <a href="mailto:info@pathopluslab.com" style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
+              <a href="mailto:info@pathopluslab.com"
+                style="color: white ;text-decoration: none;">info@pathopluslab.com</a>
             </p>
           </div>
         </div>
@@ -622,17 +836,21 @@
       </div>
     </div>
   </footer>
-
   <button id="backToTop" class="back-to-top-btn" onclick="scrollToTop()">
     <div class="arrow">↑</div>
   </button>
+
+  <script>
+    AOS.init();
+  </script>
 
   <script src="js/carousel.js"></script>
   <script src="js/card.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/backToTop.js"></script>
-  <script src="js/flip.js"></script>
   <script src="js/testss.js"></script>
+  <script src="js/homeVisit.js"></script>
+  <script src="js/review.js"></script>
 </body>
 
 </html>

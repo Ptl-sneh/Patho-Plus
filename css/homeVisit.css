@@ -1,0 +1,61 @@
+form {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.input-group div {
+  flex: 1;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formbutton {
+  width: 20%;
+  margin-left: 40%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #007bffeb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formbutton:hover {
+  background: #4ea3fd;
+}
+
+#confirmationMessage {
+  text-align: center;
+  margin-top: 15px;
+}
